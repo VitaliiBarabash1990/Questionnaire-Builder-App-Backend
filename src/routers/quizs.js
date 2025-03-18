@@ -11,8 +11,11 @@ import { ctrlWrapper } from "../utils/ctrlWrapper.js";
 import { createQuizSchema, updateQuizSchema } from "../validation/quizs.js";
 import { validateBody } from "../middlewares/validateBody.js";
 import { isValidId } from "../middlewares/isValidId.js";
+import { createCatalog } from "../controllers/catalogs.js";
 
 const router = Router();
+
+router.get("/catalogs", createCatalog);
 
 router.get("/quizs", ctrlWrapper(getQuizsController));
 

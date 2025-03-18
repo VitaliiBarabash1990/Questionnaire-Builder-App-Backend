@@ -29,6 +29,8 @@ const quizsSchema = new Schema(
 				},
 			],
 		},
+
+		catalogId: { type: Schema.Types.ObjectId, ref: "сatalogs", required: true },
 	},
 	{
 		timestamps: true,
